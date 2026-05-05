@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ToolTip from "../components/Tooltip";
+import SocialFollow from "../components/SocialFollow";
 ---
 
 <Layout title="John Tan-Aristy">
@@ -19,6 +20,9 @@ import ToolTip from "../components/Tooltip";
         bibendum. Et amet tempus, vulputate nostra sagittis rutrum est.
         Scelerisque dolor consequat a ipsum fames est leo.
       </p>
+    </div>
+    <div class="p-3 max-w-sm">
+      <SocialFollow client:load />
     </div>
     <div>
       <h2 class="font-bold text-2xl">John’s Favorite Languages</h2>
