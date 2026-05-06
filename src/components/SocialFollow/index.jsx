@@ -87,11 +87,11 @@ export default function SocialFollow() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-black/5 transition-colors"
+            className="flex items-center gap-2 px-4 py-3 no-underline hover:underline decoration-light-accent decoration-2 text-off-black transition-all"
             onClick={(e) => e.stopPropagation()}
           >
-            <Icon className="w-7 h-7 flex-shrink-0 text-off-black" />
-            <span className="font-bold text-lg text-off-black">{name}</span>
+            <Icon className="w-5 h-5 flex-shrink-0" />
+            <span className="font-bold text-sm">{name}</span>
           </a>
         ))}
       </div>

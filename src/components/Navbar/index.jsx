@@ -146,7 +146,7 @@ export default function Navbar({ pathname }) {
                         href="https://github.com/jpt1729/new-portfolio"
                         target="_blank"
                       >
-                        https://github.com/jpt1729/new-portfolio
+                        github.com/jpt1729/new-portfolio
                       </a>
                       <a
                         className="underline lg:hidden inline-block"

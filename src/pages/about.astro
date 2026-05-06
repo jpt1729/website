@@ -2,102 +2,178 @@
 import Layout from "../layouts/Layout.astro";
 import ToolTip from "../components/Tooltip";
 import SocialFollow from "../components/SocialFollow";
+import DropDown from "../components/DropDown";
 ---
 
 <Layout title="John Tan-Aristy">
-  <main class="max-w-screen-xl m-auto text-base">
-    <h1 class="text-9xl text-light-accent border-b-8 border-light-accent w-fit">
+  <main class="max-w-screen-xl m-auto px-4 py-6 text-base">
+    <h1
+      class="text-5xl lg:text-9xl text-light-accent border-b-8 border-light-accent w-fit mb-8"
+    >
       {"> ABOUT"}
     </h1>
-    <div class="p-3">
-      <h2 class="font-bold text-2xl">A little bit about me</h2>
-      <p>
-        Lorem ipsum odor amet, consectetuer adipiscing elit. Luctus sagittis
-        accumsan varius massa magnis. Enim erat feugiat ridiculus nisi eros.
-        Purus sociosqu per pharetra ridiculus id et massa aliquet quam. Est
-        auctor maximus sagittis ornare potenti. Inceptos vestibulum consectetur
-        lectus donec maximus adipiscing. Commodo elit accumsan natoque commodo
-        bibendum. Et amet tempus, vulputate nostra sagittis rutrum est.
-        Scelerisque dolor consequat a ipsum fames est leo.
-      </p>
-    </div>
-    <div class="p-3 max-w-sm">
-      <SocialFollow client:load />
-    </div>
-    <div>
-      <h2 class="font-bold text-2xl">John’s Favorite Languages</h2>
-      <div class="">
-        <div class="w-fit">
-          <h3 class="text-light-accent underline">Languages</h3>
-          <ul>
-            <li class="w-fit">
-              {"> JavaScript"}
-            </li>
-            <li class="w-fit">
-              {"> Python"}
-            </li>
-            <li class="w-fit">
-              {"> HTML/CSS"}
-            </li>
-          </ul>
+
+    <div
+      class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] lg:grid-rows-[auto_1fr] gap-8 items-start"
+    >
+      <!-- Left col, row 1: Bio + Social -->
+      <div class="flex flex-col gap-6 lg:col-start-1 lg:row-start-1">
+        <div>
+          <h2 class="font-bold text-2xl mb-2">A little bit about me</h2>
+          <p>
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Luctus sagittis
+            accumsan varius massa magnis. Enim erat feugiat ridiculus nisi eros.
+            Purus sociosqu per pharetra ridiculus id et massa aliquet quam. Est
+            auctor maximus sagittis ornare potenti. Inceptos vestibulum
+            consectetur lectus donec maximus adipiscing. Commodo elit accumsan
+            natoque commodo bibendum. Et amet tempus, vulputate nostra sagittis
+            rutrum est. Scelerisque dolor consequat a ipsum fames est leo.
+          </p>
         </div>
-        <div class="w-fit">
-          <h3 class="text-[#00208F] underline">Frameworks</h3>
-          <!-- TODO: Add to tailwind config -->
-          <ul>
-            <ToolTip tooltip={"My go to framework!"} client:load>
-              <li class="w-fit">
-                {"> React.js"}
-              </li>
-            </ToolTip>
-            <li class="w-fit">
-              {"> React Native"}
-            </li>
-            <li class="w-fit">
-              {"> Next.js"}
-            </li>
-            <ToolTip tooltip={"What this website is made in!"} client:load>
-              <li class="w-fit">
-                {"> Astro"}
-              </li>
-            </ToolTip>
-            <li class="w-fit mt-4">
-              {"> Pandas"}
-            </li>
-            <li class="w-fit">
-              {"> Numpy"}
-            </li>
-            <li class="w-fit">
-              {"> Matplotlib"}
-            </li>
-            <ToolTip tooltip={"My graphs!"} client:load>
-              <li class="w-fit">
-                {"> Seaborn"}
-              </li>
-            </ToolTip>
-          </ul>
+      </div>
+
+      <!-- Right col, spans both rows: Work Experience -->
+      <div class="lg:col-start-2 lg:row-start-1 lg:row-span-2">
+        <h2 class="font-bold text-2xl mb-2">Some of my experiences</h2>
+        <div>
+          <DropDown title="Developer Fellow - Longhorn Developers" client:load>
+            <p>
+              Currently working on Longhorn Developers, a student run
+              development organization at UT Austin (Hook 'em Horns 🤘), studies
+              app (<a
+                href="https://github.com/Longhorn-Developers/Longhorn-Studies"
+                >github.com/Longhorn-Developers/Longhorn-Studies</a
+              >).
+            </p>
+            <br />
+            <p>
+              Throughout this project, I've been working on the development team
+              in collaboration with designers and product managers to build the
+              goals of the people.
+            </p>
+            <div class="flex gap-2 mt-1">
+              <img
+                src="/images/studies-home.png"
+                alt="Longhorn Studies home screen"
+                class="w-1/2 shadow-sm"
+              />
+              <img
+                src="/images/studies-filter.png"
+                alt="Longhorn Studies filter screen"
+                class="w-1/2 shadow-sm"
+              />
+            </div>
+            <p class="text-xs opacity-50 mt-1">
+              Beautiful designs built by the Longhorn Studies design team.
+            </p>
+            <br />
+          </DropDown>
+          <DropDown title="Hackathons - " client:load>
+            <p>
+              Competed in a bunch of hackathons across the country most recently
+              YHack at Yale, HackClub's Undercity at GitHub HQ, HackClub's
+              Apocalypse at Shopify Toronto, and HackMIT's Blueprint.
+            </p>
+            <br />
+            <p>
+              Each one was a different problem, a different team, and a
+              different excuse to build something fast and figure out the
+              details later. Met a lot of wonderful people, learned a whole lot,
+              and won a couple on the way!
+            </p>
+          </DropDown>
+          <DropDown
+            title="HIP-SAT Intern - MIT Chemical Engineering"
+            client:load
+          >
+            <p>
+              Spent a summer at the Galloway Lab as a HIP-SAT intern, working
+              under a graduate student mentor on using SNAP circuits to detect
+              and analyze p53 dynamics with the graph generation done in Python.
+            </p>
+            <br />
+            <p>
+              Presenting my findings to faculty, scientists, and fellow
+              enthusiasts at the Boston Mammalian SynBio (da BOMB) 2023
+              conference and earned Top-10 placement in Society of Biomedical
+              Engineering High School Poster Competition, presenting my findings
+              at their 2023 Seattle Annual Research Conference.
+            </p>
+            <br />
+            <img
+              src="/images/bmes-poster.jpg"
+              alt="BMES poster presentation"
+              class="w-full mt-1 shadow-sm"
+            />
+            <p class="text-xs opacity-50 mt-1">
+              The poster I presented at the 2023 BMES High School Poster
+              Competition
+            </p>
+          </DropDown>
         </div>
-        <div class="w-fit">
-          <h3 class="text-[#C6A862] underline">Tools</h3>
-          <!-- TODO: Add to tailwind config -->
-          <ul>
-            <ToolTip tooltip={"I <3 Figma"} client:load>
-              <li class="w-fit">
-                {"> Figma"}
-              </li>
-            </ToolTip>
-            <li class="w-fit">
-              {"> KiCad"}
-            </li>
-            <ToolTip tooltip={"Literally what I am using rn"} client:load>
-              <li class="w-fit">
-                {"> VSCode"}
-              </li>
-            </ToolTip>
-            <li class="w-fit">
-              {"> Git"}
-            </li>
-          </ul>
+        <ToolTip tooltip={"Redirect to my works page."} client:load>
+          <a
+            href="/works"
+            class="inline-block mt-4 px-5 text-sm opacity-50 hover:opacity-100 hover:underline decoration-light-accent decoration-2 transition-opacity"
+          >
+            {"> see all my work"}
+          </a>
+        </ToolTip>
+      </div>
+
+      <!-- Left col, row 2: Tools -->
+      <div class="lg:col-start-1 lg:row-start-2">
+        <h2 class="font-bold text-2xl mb-2">My tools</h2>
+        <div class="flex gap-12">
+          <div class="w-fit">
+            <h3 class="text-[#00208F] underline">Frameworks</h3>
+            <ul>
+              <ToolTip tooltip={"My go to framework!"} client:load>
+                <li class="w-fit">{"> React.js"}</li>
+              </ToolTip>
+              <li class="w-fit">{"> React Native"}</li>
+              <li class="w-fit">{"> Next.js"}</li>
+              <ToolTip tooltip={"What this website is made in!"} client:load>
+                <li class="w-fit">{"> Astro"}</li>
+              </ToolTip>
+              <li class="w-fit">{"> Pandas"}</li>
+              <li class="w-fit">{"> Numpy"}</li>
+              <li class="w-fit">{"> Tensorflow"}</li>
+              <li class="w-fit">{"> Matplotlib"}</li>
+              <ToolTip tooltip={"My graphs!"} client:load>
+                <li class="w-fit">{"> Seaborn"}</li>
+              </ToolTip>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-6">
+            <div class="w-fit">
+              <h3 class="text-light-accent underline">Languages</h3>
+              <ul>
+                <li class="w-fit">{"> JavaScript"}</li>
+                <li class="w-fit">{"> Python"}</li>
+                <li class="w-fit">{"> HTML/CSS"}</li>
+              </ul>
+            </div>
+            <div class="w-fit">
+              <h3 class="text-[#C6A862] underline">Tools</h3>
+              <ul>
+                <ToolTip tooltip={"I <3 Figma"} client:load>
+                  <li class="w-fit">{"> Figma"}</li>
+                </ToolTip>
+                <li class="w-fit">{"> KiCad"}</li>
+                <ToolTip tooltip={"Tragically :("} client:load>
+                  <li class="w-fit">{"> LTSpice"}</li>
+                </ToolTip>
+                <ToolTip tooltip={"Literally what I am using rn"} client:load>
+                  <li class="w-fit">{"> VSCode"}</li>
+                </ToolTip>
+                <li class="w-fit">{"> Git"}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-sm mt-8">
+          <SocialFollow client:load />
         </div>
       </div>
     </div>
