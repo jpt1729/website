@@ -14,7 +14,7 @@ import ImageLightbox from "../components/ImageLightbox/index.jsx";
 
     <div class="max-w-2xl mb-20">
       <p>
-        I'm a developer and researcher who likes building things that matter —
+        I'm a developer and researcher who likes building things that matter
         whether that's a mobile app used by hundreds of students, a research
         tool detecting protein dynamics, or a hackathon project thrown together
         in 24 hours. Here's a more complete picture of what I've been up to.
@@ -23,29 +23,74 @@ import ImageLightbox from "../components/ImageLightbox/index.jsx";
 
     <!-- Projects -->
     <section class="mb-16 max-w-full">
-      <h2 class="font-bold text-2xl mb-2">Things I've built</h2>
+      <h2 class="font-bold text-2xl mb-2">Work Experience</h2>
 
-      <WorkItem title="Longhorn Studies" date="2024 – present" location="Austin, TX">
+      <WorkItem
+        title="Developer Fellow - Longhorn Studies"
+        date="August 2025 – present"
+        location="Austin, TX"
+      >
         <p>
-          A mobile study app for UT Austin students, built within Longhorn
-          Developers. Worked across the full stack alongside designers and PMs
-          to ship real features used by real students.
+          Joined as a freshman to help build a mobile study app for UT Austin
+          students within Longhorn Developers, an open source development org @
+          UT Austin. Worked across the full stack, collaboration heavily with
+          our design team and project managers to ship features.
         </p>
         <br />
         <div class="flex flex-wrap gap-2">
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">React Native</span>
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">Expo</span>
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TypeScript</span>
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >React Native</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Expo</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >TypeScript</span
+          >
         </div>
         <a
           href="https://github.com/Longhorn-Developers/Longhorn-Studies"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-block mt-3 text-sm opacity-50 hover:opacity-100 hover:underline decoration-light-accent decoration-2 transition-opacity"
-        >{">"} github.com/Longhorn-Developers/Longhorn-Studies</a>
+          >{">"} github.com/Longhorn-Developers/Longhorn-Studies</a
+        >
+        <div class="flex gap-2 mt-1">
+          <ImageLightbox
+            src="/images/studies-home.png"
+            alt="Longhorn Studies home screen."
+            caption="Longhorn Studies home screen."
+            client:load
+          >
+            <img
+              src="/images/studies-home.png"
+              alt="Longhorn Studies home screen."
+              class="w-32 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+            />
+          </ImageLightbox>
+          <ImageLightbox
+            src="/images/studies-filter.png"
+            alt="Longhorn Studies filter screen."
+            caption="Longhorn Studies filter screen."
+            client:load
+          >
+            <img
+              src="/images/studies-filter.png"
+              alt="Longhorn Studies filter screen."
+              class="w-32 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+            />
+          </ImageLightbox>
+        </div>
       </WorkItem>
 
-      <WorkItem title="p53 Dynamics Research Tool" date="Summer 2023" location="Cambridge, MA">
+      <WorkItem
+        title="HIP-SAT Intern - MIT Chemical Engineering"
+        date="Summer 2023"
+        location="Cambridge, MA"
+      >
         <p>
           Built during my HIP-SAT internship at the Galloway Lab (MIT). Used
           SNAP circuits to detect and analyze p53 protein dynamics, with
@@ -53,9 +98,18 @@ import ImageLightbox from "../components/ImageLightbox/index.jsx";
         </p>
         <br />
         <div class="flex flex-wrap gap-2">
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">Python</span>
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">Matplotlib</span>
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">SNAP Circuits</span>
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Python</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Matplotlib</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >SNAP Circuits</span
+          >
         </div>
         <ImageLightbox
           src="/images/bmes-poster.jpg"
@@ -70,36 +124,209 @@ import ImageLightbox from "../components/ImageLightbox/index.jsx";
           />
         </ImageLightbox>
       </WorkItem>
+    </section>
 
-      <WorkItem title="YHack" date="TODO: year" location="New Haven, CT">
-        <p>TODO: describe what you built.</p>
+    <!-- Personal Projects -->
+    <section class="mb-16 max-w-full">
+      <h2 class="font-bold text-2xl mb-2">Personal & Hackathon Projects</h2>
+
+      <WorkItem
+        title="Canary - YHack"
+        date="March 2026"
+        location="New Haven, CT"
+      >
+        <p>
+          Collaborated with a wonderful team to build a system around a
+          Raspberry Pi, interfacing MQ-series gas sensors and a DHT11 humidity
+          sensor through its GPIO pins.
+          <br />
+          <br /> The sensors continuously collect environmental data, with thresholds
+          used to detect hazardous conditions. A Python-based pipeline processes this
+          data in real time, triggering alerts when unsafe levels are reached. We
+          also integrated a depth camera to map the surrounding tunnel geometry, enabling
+          more accurate simulations of gas diffusion and allowing us to visualize
+          and predict how hazards spread through the environment.
+        </p>
+        <br />
+        <p>
+          Earned 3rd place in the ASUS Societal Impact track and 4th place in
+          the QNX Hardware track.
+        </p>
         <br />
         <div class="flex flex-wrap gap-2">
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TODO: stack</span>
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Raspberry Pi</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Circuit Python</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Intel RealSense Camera</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >MQ-series gas sensors</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >DHT11 humidity sensor</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Zed</span
+          >
+        </div>
+        <a
+          href="https://github.com/tastychez/Canary"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-3 text-sm opacity-50 hover:opacity-100 hover:underline decoration-light-accent decoration-2 transition-opacity"
+          >{">"} github.com/tastychez/Canary</a
+        >
+        <div class="flex gap-1">
+          <ImageLightbox
+            src="/images/canary.jpg"
+            alt="Canary project being built."
+            caption="Canary project being built."
+            client:load
+          >
+            <img
+              src="/images/canary.jpg"
+              alt="Canary project being built."
+              class="w-32 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+            />
+          </ImageLightbox>
+          <ImageLightbox
+            src="/images/canary-enclosure.jpeg"
+            alt="3D render of the enclosure for Canary."
+            caption="3D render of the enclosure for Canary."
+            client:load
+          >
+            <img
+              src="/images/canary-enclosure.jpeg"
+              alt="3D render of the enclosure for Canary."
+              class="w-64 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+            />
+          </ImageLightbox>
         </div>
       </WorkItem>
 
-      <WorkItem title="HackClub Undercity" date="TODO: year" location="San Francisco, CA">
-        <p>TODO: describe what you built.</p>
+      <WorkItem
+        title="Waffle House Compass - Personal"
+        date="December 2025"
+        location="Houston, TX"
+      >
+        <p>
+          A little bit of a personal project but I built a compass that points
+          to the nearest Waffle House using Next.js, Geolocation API, Device
+          Orientation API, and Waffle House's location data.
+        </p>
+        <br />
+        <br />
+        <p>
+          My brothers and I have a tradition where we always go to Waffle House
+          whenever we're all together. This project was inspired by that
+          tradition
+        </p>
         <br />
         <div class="flex flex-wrap gap-2">
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TODO: stack</span>
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Next.js</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Geolocation API</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Device Orientation API</span
+          >
         </div>
+        <a
+          href="https://github.com/jpt1729/waffle-house-compass"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-3 text-sm opacity-50 hover:opacity-100 hover:underline decoration-light-accent decoration-2 transition-opacity"
+          >{">"} github.com/jpt1729/waffle-house-compass</a
+        >
+        <ImageLightbox
+          src="/images/waffle-house-compass.png"
+          alt="Waffle House Compass Screenshot"
+          caption="Live screenshot from the Waffle House Compass web app."
+          client:load
+        >
+          <img
+            src="/images/waffle-house-compass.png"
+            alt="Waffle House Compass Screenshot"
+            class="w-16 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+          />
+        </ImageLightbox>
       </WorkItem>
 
-      <WorkItem title="HackClub Apocalypse" date="TODO: year" location="Toronto, ON">
-        <p>TODO: describe what you built.</p>
+      <WorkItem
+        title="The Tell - HackClub's Undercity"
+        date="July 2025"
+        location="San Francisco, CA"
+      >
+        <p>
+          My brother and I spent 48 hours building at GitHub HQ in San Francisco
+          on a project building a hardware device that gives poker players the
+          probability of their hand winning. Event was a lot of fun and project
+          came out great!
+        </p>
+        <br />
+        <br />
+        <p>
+          After building this, my brother and I proceeded to get stuck in the
+          Denver airport for 24 hours.
+        </p>
         <br />
         <div class="flex flex-wrap gap-2">
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TODO: stack</span>
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Raspberry Pi Pico</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Circuit Python</span
+          >
         </div>
-      </WorkItem>
-
-      <WorkItem title="HackMIT Blueprint" date="TODO: year" location="Cambridge, MA">
-        <p>TODO: describe what you built.</p>
-        <br />
-        <div class="flex flex-wrap gap-2">
-          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TODO: stack</span>
+        <a
+          href="https://github.com/jpt1729/undercity-project"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-3 text-sm opacity-50 hover:opacity-100 hover:underline decoration-light-accent decoration-2 transition-opacity"
+          >{">"} github.com/jpt1729/undercity-project</a
+        >
+        <div class="flex gap-1">
+          <ImageLightbox
+            src="/images/tell-1.jpg"
+            alt="Photo 1 of the Tell"
+            caption="The Tell project in person."
+            client:load
+          >
+            <img
+              src="/images/tell-1.jpg"
+              alt="Photo 1 of the Tell"
+              class="w-32 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+            />
+          </ImageLightbox>
+          <ImageLightbox
+            src="/images/tell-2.jpg"
+            alt="Photo 2 of the Tell"
+            caption="Another angle of the Tell"
+            client:load
+          >
+            <img
+              src="/images/tell-2.jpg"
+              alt="Photo 2 of the Tell"
+              class="w-32 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+            />
+          </ImageLightbox>
         </div>
       </WorkItem>
     </section>
@@ -108,20 +335,39 @@ import ImageLightbox from "../components/ImageLightbox/index.jsx";
     <section class="max-w-full">
       <h2 class="font-bold text-2xl mb-2">Recognition</h2>
       <div class="flex flex-col gap-4">
-        <WorkItem title="Top-10 High School Poster Competition" date="2023" location="Seattle, WA">
-          <p class="text-sm opacity-50">Society of Biomedical Engineering (BMES)</p>
-          <p class="text-sm opacity-40 italic mt-0.5">Presented at the 2023 BMES Annual Research Conference.</p>
-        </WorkItem>
-
-        <WorkItem title="Boston Mammalian SynBio (da BOMB) Presenter" date="2023" location="Boston, MA">
-          <p class="text-sm opacity-50">MIT / Galloway Lab</p>
+        <WorkItem title="YHack" date="March 2026" location="New Haven, CT">
+          <p class="text-sm opacity-50">Yale's Annual Hackathon</p>
           <p class="text-sm opacity-40 italic mt-0.5">
-            Presented p53 dynamics research to faculty, scientists, and fellow enthusiasts.
+            Earned 3rd place in the ASUS Societal Impact track and 4th place in
+            the QNX Hardware track.
           </p>
         </WorkItem>
 
-        <WorkItem title="TODO: award name" date="TODO" location="TODO: city">
-          <p class="text-sm opacity-50">TODO: org / event</p>
+        <WorkItem
+          title="2nd place in Polymet Challenge"
+          date="May 2025"
+          location="San Francisco, CA"
+        >
+          <p class="text-sm opacity-50">
+            Transpose Platform VIBE25-2: After Hours Vibe Hackathon
+          </p>
+          <p class="text-sm opacity-40 italic mt-0.5">
+            Won 2nd place in the Polymet Challenge building an improved Texas
+            DMV website
+          </p>
+        </WorkItem>
+        <WorkItem
+          title="2023 Top-10 BMES High School Poster Competition"
+          date="October 2023"
+          location="Seattle, WA"
+        >
+          <p class="text-sm opacity-50">
+            Society of Biomedical Engineering (BMES)
+          </p>
+          <p class="text-sm opacity-40 italic mt-0.5">
+            Placed top-10 in BMES High School Poster Competition. Was flown out
+            and presented at the 2023 BMES Annual Research Conference.
+          </p>
         </WorkItem>
       </div>
     </section>
