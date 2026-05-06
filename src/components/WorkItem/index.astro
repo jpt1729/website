@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  date?: string;
+  location?: string;
+}
+const { title, date, location } = Astro.props;
+---
+
+<div class="w-full">
+  <div class="flex items-baseline justify-between px-5 py-1 w-full">
+    <div class="flex items-baseline gap-2">
+      <span class="text-off-black text-base leading-none select-none">—</span>
+      <span class="text-base text-off-black">{title}</span>
+    </div>
+    {(date || location) && (
+      <div class="flex gap-2 text-base opacity-40">
+        {date && <span>{date}</span>}
+        {date && location && <span>·</span>}
+        {location && <span>{location}</span>}
+      </div>
+    )}
+  </div>
+  <div class="px-5 py-1 ml-5">
+    <slot />
+  </div>
+</div>

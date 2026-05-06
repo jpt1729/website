@@ -1,5 +1,6 @@
 ---
 import "@fontsource/ibm-plex-mono";
+import { execSync } from "node:child_process";
 
 import Navbar from "../components/Navbar";
 interface Props {
@@ -7,6 +8,15 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+let gitHash = "dev";
+if (import.meta.env.PROD) {
+  try {
+    gitHash = execSync("git rev-parse --short HEAD").toString().trim();
+  } catch {
+    gitHash = "unknown";
+  }
+}
 ---
 
 <!doctype html>
@@ -20,7 +30,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-off-white">
-    <Navbar client:load pathname={Astro.url.pathname}/>
+    <Navbar client:load pathname={Astro.url.pathname} gitHash={gitHash} />
     <div class="w-full h-14"></div>
     <slot />
     <div class="w-full h-14 md:hidden"></div>
@@ -51,6 +61,17 @@ const { title } = Astro.props;
   body {
     font-family: "GeistMono", monospace;
   }
+  ::selection {
+    background-color: #1072fa;
+    color: #ffffff;
+  }
+
+  .text-light-accent::selection,
+  .text-light-accent *::selection {
+    background-color: #0B1215;
+    color: #ffffff;
+  }
+
   @keyframes Flash {
     50% {
       opacity: 0;

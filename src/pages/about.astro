@@ -21,19 +21,21 @@ import DropDown from "../components/DropDown";
         <div>
           <h2 class="font-bold text-2xl mb-2">A little bit about me</h2>
           <p>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Luctus sagittis
-            accumsan varius massa magnis. Enim erat feugiat ridiculus nisi eros.
-            Purus sociosqu per pharetra ridiculus id et massa aliquet quam. Est
-            auctor maximus sagittis ornare potenti. Inceptos vestibulum
-            consectetur lectus donec maximus adipiscing. Commodo elit accumsan
-            natoque commodo bibendum. Et amet tempus, vulputate nostra sagittis
-            rutrum est. Scelerisque dolor consequat a ipsum fames est leo.
+            Hi y'all. I'm John. I'm a second year ECE student at UT Austin from
+            Houston, Texas. I love hackathons, working on hardware projects, and
+            web development.
+            <br />
+            <br />
+            In my free time, I like to explore cities, train Jiu Jitsu, and of course Texas football.
           </p>
         </div>
       </div>
 
       <!-- Right col, spans both rows: Work Experience -->
       <div class="lg:col-start-2 lg:row-start-1 lg:row-span-2">
+        <div class="max-w-sm mb-6">
+          <SocialFollow client:load />
+        </div>
         <h2 class="font-bold text-2xl mb-2">Some of my experiences</h2>
         <div>
           <DropDown title="Developer Fellow - Longhorn Developers" client:load>
@@ -55,12 +57,12 @@ import DropDown from "../components/DropDown";
               <img
                 src="/images/studies-home.png"
                 alt="Longhorn Studies home screen"
-                class="w-1/2 shadow-sm"
+                class="w-1/4 shadow-sm"
               />
               <img
                 src="/images/studies-filter.png"
                 alt="Longhorn Studies filter screen"
-                class="w-1/2 shadow-sm"
+                class="w-1/4 shadow-sm"
               />
             </div>
             <p class="text-xs opacity-50 mt-1">
@@ -68,7 +70,7 @@ import DropDown from "../components/DropDown";
             </p>
             <br />
           </DropDown>
-          <DropDown title="Hackathons - " client:load>
+          <DropDown title="Hackathons" client:load>
             <p>
               Competed in a bunch of hackathons across the country most recently
               YHack at Yale, HackClub's Undercity at GitHub HQ, HackClub's
@@ -103,7 +105,7 @@ import DropDown from "../components/DropDown";
             <img
               src="/images/bmes-poster.jpg"
               alt="BMES poster presentation"
-              class="w-full mt-1 shadow-sm"
+              class="w-1/2 mt-1 shadow-sm"
             />
             <p class="text-xs opacity-50 mt-1">
               The poster I presented at the 2023 BMES High School Poster
@@ -171,9 +173,6 @@ import DropDown from "../components/DropDown";
               </ul>
             </div>
           </div>
-        </div>
-        <div class="max-w-sm mt-8">
-          <SocialFollow client:load />
         </div>
       </div>
     </div>

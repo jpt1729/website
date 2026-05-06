@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404 - Not Found">
+  <main class="max-w-screen-xl m-auto px-4 py-6 text-base">
+    <h1
+      class="text-5xl lg:text-9xl text-light-accent border-b-8 border-light-accent w-fit mb-8"
+    >
+      {"> 404"}
+    </h1>
+    <div class="flex flex-col gap-3">
+      <p class="font-bold text-2xl">Page not found.</p>
+      <p class="opacity-60">
+        You've wandered off the map. This page doesn't exist.
+      </p>
+      <a
+        href="/"
+        class="mt-4 w-fit text-sm opacity-50 hover:opacity-100 hover:underline decoration-light-accent decoration-2 transition-opacity"
+      >
+        {"> go home"}
+      </a>
+    </div>
+  </main>
+</Layout>

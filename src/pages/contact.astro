@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ToolTip from "../components/Tooltip/index.jsx";
+---
+
+<Layout title="John Tan-Aristy — Contact">
+  <main class="max-w-screen-xl m-auto px-4 py-6 text-base">
+    <h1
+      class="text-5xl lg:text-9xl text-light-accent border-b-8 border-light-accent w-fit mb-8"
+    >
+      {"> CONTACT"}
+    </h1>
+
+    <div class="max-w-2xl mb-16">
+      <p class="opacity-70">
+        Open to conversations about projects, opportunities, or just something
+        cool you found. Pick your medium.
+      </p>
+    </div>
+
+    <div class="flex flex-col max-w-2xl">
+      <a
+        href="mailto:jtanaristy@utexas.edu"
+        class="group flex items-baseline justify-between"
+      >
+        <div class="flex items-baseline gap-2">
+          <span class="text-off-black select-none">—</span>
+          <span class="text-base group-hover:text-light-accent transition-colors duration-200">email</span>
+        </div>
+        <span class="text-base opacity-40 group-hover:opacity-100 transition-opacity duration-200">
+          jtanaristy@utexas.edu
+        </span>
+      </a>
+
+      <a
+        href="https://x.com/jpt1729"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group flex items-baseline justify-between"
+      >
+        <div class="flex items-baseline gap-2">
+          <span class="text-off-black select-none">—</span>
+          <span class="text-base group-hover:text-light-accent transition-colors duration-200">x</span>
+        </div>
+        <span class="text-base opacity-40 group-hover:opacity-100 transition-opacity duration-200">
+          @jpt1729
+        </span>
+      </a>
+
+      <ToolTip tooltip="yeah, spotify dms are a thing" client:load>
+        <a
+          href="/api/spotify"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group flex items-baseline justify-between"
+        >
+          <div class="flex items-baseline gap-2">
+            <span class="text-off-black select-none">—</span>
+            <span class="text-base group-hover:text-light-accent transition-colors duration-200">spotify</span>
+          </div>
+          <span class="text-base opacity-40 group-hover:opacity-100 transition-opacity duration-200">
+            John
+          </span>
+        </a>
+      </ToolTip>
+    </div>
+  </main>
+</Layout>

@@ -46,7 +46,7 @@ function MenuItem({ name, href, select, child, ...props }) {
   HOME
 </motion.li>
 */
-export default function Navbar({ pathname }) {
+export default function Navbar({ pathname, gitHash = "dev" }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
@@ -119,16 +119,10 @@ export default function Navbar({ pathname }) {
                       child={2}
                     />
                     <MenuItem
-                      name="BLOG"
-                      href="/blog"
-                      select={pathname === '/blog'}
-                      child={3}
-                    />
-                    <MenuItem
                       name="CONTACT"
                       href="/contact"
                       select={pathname === '/contact'}
-                      child={4}
+                      child={3}
                     />
                   </ol>
                 </div>
@@ -169,7 +163,7 @@ export default function Navbar({ pathname }) {
                   </div>
                   <div>
                     <span>
-                      {`(c)`} John Tan-Aristy, {new Date().getFullYear()}
+                      {`(c)`} John Tan-Aristy, {new Date().getFullYear()} · {gitHash}
                     </span>
                   </div>
                 </motion.footer>

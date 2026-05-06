@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WorkItem from "../components/WorkItem/index.astro";
+import ImageLightbox from "../components/ImageLightbox/index.jsx";
+---
+
+<Layout title="John Tan-Aristy — Work">
+  <main class="max-w-screen-xl m-auto px-4 py-6 text-base">
+    <h1
+      class="text-5xl lg:text-9xl text-light-accent border-b-8 border-light-accent w-fit mb-8"
+    >
+      {"> WORK"}
+    </h1>
+
+    <div class="max-w-2xl mb-20">
+      <p>
+        I'm a developer and researcher who likes building things that matter —
+        whether that's a mobile app used by hundreds of students, a research
+        tool detecting protein dynamics, or a hackathon project thrown together
+        in 24 hours. Here's a more complete picture of what I've been up to.
+      </p>
+    </div>
+
+    <!-- Projects -->
+    <section class="mb-16 max-w-full">
+      <h2 class="font-bold text-2xl mb-2">Things I've built</h2>
+
+      <WorkItem title="Longhorn Studies" date="2024 – present" location="Austin, TX">
+        <p>
+          A mobile study app for UT Austin students, built within Longhorn
+          Developers. Worked across the full stack alongside designers and PMs
+          to ship real features used by real students.
+        </p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">React Native</span>
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">Expo</span>
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TypeScript</span>
+        </div>
+        <a
+          href="https://github.com/Longhorn-Developers/Longhorn-Studies"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block mt-3 text-sm opacity-50 hover:opacity-100 hover:underline decoration-light-accent decoration-2 transition-opacity"
+        >{">"} github.com/Longhorn-Developers/Longhorn-Studies</a>
+      </WorkItem>
+
+      <WorkItem title="p53 Dynamics Research Tool" date="Summer 2023" location="Cambridge, MA">
+        <p>
+          Built during my HIP-SAT internship at the Galloway Lab (MIT). Used
+          SNAP circuits to detect and analyze p53 protein dynamics, with
+          automated graph generation in Python.
+        </p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">Python</span>
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">Matplotlib</span>
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">SNAP Circuits</span>
+        </div>
+        <ImageLightbox
+          src="/images/bmes-poster.jpg"
+          alt="BMES poster presentation"
+          caption="Poster presented at the 2023 BMES High School Poster Competition."
+          client:load
+        >
+          <img
+            src="/images/bmes-poster.jpg"
+            alt="BMES poster presentation"
+            class="w-80 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+          />
+        </ImageLightbox>
+      </WorkItem>
+
+      <WorkItem title="YHack" date="TODO: year" location="New Haven, CT">
+        <p>TODO: describe what you built.</p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TODO: stack</span>
+        </div>
+      </WorkItem>
+
+      <WorkItem title="HackClub Undercity" date="TODO: year" location="San Francisco, CA">
+        <p>TODO: describe what you built.</p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TODO: stack</span>
+        </div>
+      </WorkItem>
+
+      <WorkItem title="HackClub Apocalypse" date="TODO: year" location="Toronto, ON">
+        <p>TODO: describe what you built.</p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TODO: stack</span>
+        </div>
+      </WorkItem>
+
+      <WorkItem title="HackMIT Blueprint" date="TODO: year" location="Cambridge, MA">
+        <p>TODO: describe what you built.</p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50">TODO: stack</span>
+        </div>
+      </WorkItem>
+    </section>
+
+    <!-- Awards -->
+    <section class="max-w-full">
+      <h2 class="font-bold text-2xl mb-2">Recognition</h2>
+      <div class="flex flex-col gap-4">
+        <WorkItem title="Top-10 High School Poster Competition" date="2023" location="Seattle, WA">
+          <p class="text-sm opacity-50">Society of Biomedical Engineering (BMES)</p>
+          <p class="text-sm opacity-40 italic mt-0.5">Presented at the 2023 BMES Annual Research Conference.</p>
+        </WorkItem>
+
+        <WorkItem title="Boston Mammalian SynBio (da BOMB) Presenter" date="2023" location="Boston, MA">
+          <p class="text-sm opacity-50">MIT / Galloway Lab</p>
+          <p class="text-sm opacity-40 italic mt-0.5">
+            Presented p53 dynamics research to faculty, scientists, and fellow enthusiasts.
+          </p>
+        </WorkItem>
+
+        <WorkItem title="TODO: award name" date="TODO" location="TODO: city">
+          <p class="text-sm opacity-50">TODO: org / event</p>
+        </WorkItem>
+      </div>
+    </section>
+  </main>
+</Layout>

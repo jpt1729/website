@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+interface Props {
+  error: unknown;
+}
+---
+
+<Layout title="500 - Server Error">
+  <main class="max-w-screen-xl m-auto px-4 py-6 text-base">
+    <h1
+      class="text-5xl lg:text-9xl text-light-accent border-b-8 border-light-accent w-fit mb-8"
+    >
+      {"> 500"}
+    </h1>
+    <div class="flex flex-col gap-3">
+      <p class="font-bold text-2xl">Something went wrong.</p>
+      <p class="opacity-60">
+        This is embarrassing... An error occurred on the server. Try refreshing — if it keeps happening,
+        come back later.
+      </p>
+      <a
+        href="/"
+        class="mt-4 w-fit text-sm opacity-50 hover:opacity-100 hover:underline decoration-light-accent decoration-2 transition-opacity"
+      >
+        {"> go home"}
+      </a>
+    </div>
+  </main>
+</Layout>
