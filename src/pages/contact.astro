@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ToolTip from "../components/Tooltip/index.jsx";
+import LonghornAscii from "../components/LonghornAscii/index.astro";
 ---
 
 <Layout title="John Tan-Aristy — Contact">
@@ -11,58 +12,60 @@ import ToolTip from "../components/Tooltip/index.jsx";
       {"> CONTACT"}
     </h1>
 
-    <div class="max-w-2xl mb-16">
-      <p class="opacity-70">
-        Open to conversations about projects, opportunities, or just something
-        cool you found. Pick your medium.
-      </p>
-    </div>
+    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-12">
+      <div class="flex flex-col max-w-2xl w-full">
+        <p class="opacity-70 mb-16">
+          Open to conversations about projects, opportunities, or just something
+          cool you found. Pick your medium.
+        </p>
 
-    <div class="flex flex-col max-w-2xl">
-      <a
-        href="mailto:jtanaristy@utexas.edu"
-        class="group flex items-baseline justify-between"
-      >
-        <div class="flex items-baseline gap-2">
-          <span class="text-off-black select-none">—</span>
-          <span class="text-base group-hover:text-light-accent transition-colors duration-200">email</span>
-        </div>
-        <span class="text-base opacity-40 group-hover:opacity-100 transition-opacity duration-200">
-          jtanaristy@utexas.edu
-        </span>
-      </a>
-
-      <a
-        href="https://x.com/jpt1729"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group flex items-baseline justify-between"
-      >
-        <div class="flex items-baseline gap-2">
-          <span class="text-off-black select-none">—</span>
-          <span class="text-base group-hover:text-light-accent transition-colors duration-200">x</span>
-        </div>
-        <span class="text-base opacity-40 group-hover:opacity-100 transition-opacity duration-200">
-          @jpt1729
-        </span>
-      </a>
-
-      <ToolTip tooltip="spotify dms are a thing" client:load>
         <a
-          href="/api/spotify"
+          href="mailto:jtanaristy@utexas.edu"
+          class="group flex items-baseline justify-between"
+        >
+          <div class="flex items-baseline gap-2">
+            <span class="text-off-black select-none">—</span>
+            <span class="text-base group-hover:text-light-accent transition-colors duration-200">email</span>
+          </div>
+          <span class="text-base opacity-40 group-hover:opacity-100 transition-opacity duration-200">
+            jtanaristy@utexas.edu
+          </span>
+        </a>
+
+        <a
+          href="https://x.com/jpt1729"
           target="_blank"
           rel="noopener noreferrer"
           class="group flex items-baseline justify-between"
         >
           <div class="flex items-baseline gap-2">
             <span class="text-off-black select-none">—</span>
-            <span class="text-base group-hover:text-light-accent transition-colors duration-200">spotify</span>
+            <span class="text-base group-hover:text-light-accent transition-colors duration-200">x</span>
           </div>
           <span class="text-base opacity-40 group-hover:opacity-100 transition-opacity duration-200">
-            John
+            @jpt1729
           </span>
         </a>
-      </ToolTip>
+
+        <ToolTip tooltip="spotify dms are a thing" client:load>
+          <a
+            href="/api/spotify"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-baseline justify-between"
+          >
+            <div class="flex items-baseline gap-2">
+              <span class="text-off-black select-none">—</span>
+              <span class="text-base group-hover:text-light-accent transition-colors duration-200">spotify</span>
+            </div>
+            <span class="text-base opacity-40 group-hover:opacity-100 transition-opacity duration-200">
+              John
+            </span>
+          </a>
+        </ToolTip>
+      </div>
+
+      <LonghornAscii />
     </div>
   </main>
 </Layout>
