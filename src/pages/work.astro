@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import WorkItem from "../components/WorkItem/index.astro";
 import ImageLightbox from "../components/ImageLightbox/index.jsx";
+import VideoLightbox from "../components/VideoLightbox/index.jsx";
 ---
 
 <Layout title="John Tan-Aristy — Work">
@@ -328,6 +329,55 @@ import ImageLightbox from "../components/ImageLightbox/index.jsx";
             />
           </ImageLightbox>
         </div>
+      </WorkItem>
+      <WorkItem
+        title="Skin Cancer Detection app - Beaver Works Medlytics"
+        date="Summer 2024"
+        location="Online"
+      >
+        <p>
+          Built a full stack React Native/Expo frontend, a Flask backend, and a
+          TensorFlow CNN trained to classify dermoscopic images. Used Hugging
+          Face to optimize the model and Linode to host and stage the backend.
+          Ended up hitting 91.3% accuracy. This was for the Beaver Works
+          Medlytics Capstone project
+        </p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >React Native</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Expo</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >TensorFlow</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Python</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Flask</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Hugging Face</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Linode</span
+          >
+        </div>
+        <VideoLightbox
+          videoId="Sgr-aNpTk8I"
+          caption="Demo of the skin cancer detection app."
+          client:load
+        />
       </WorkItem>
     </section>
 

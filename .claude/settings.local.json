@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(ls -la \"d:\\\\\\\\JohnProject\\\\\\\\new-portfolio\\\\\\\\src\")",
-      "Bash(dir \"d:\\\\JohnProject\\\\new-portfolio\\\\public\" /s /b)"
+      "Bash(dir \"d:\\\\JohnProject\\\\new-portfolio\\\\public\" /s /b)",
+      "WebFetch(domain:youtube.com)"
     ]
   }
 }
