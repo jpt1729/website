@@ -8,6 +8,11 @@ export default {
         "light-accent": "#1072fa",
         "off-black": "#0B1215",
       },
+      keyframes: {
+        Flash: {
+          "50%": { opacity: "0" },
+        },
+      },
       animation: {
         "flash": "Flash 1s linear infinite",
       },
