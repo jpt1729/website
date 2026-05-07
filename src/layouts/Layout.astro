@@ -30,7 +30,7 @@ if (import.meta.env.PROD) {
     <title>{title}</title>
   </head>
   <body class="bg-off-white">
-    <Navbar client:load pathname={Astro.url.pathname} gitHash={gitHash} />
+    <Navbar client:load pathname={Astro.url.pathname.replace(/\/$/, '') || '/'} gitHash={gitHash} />
     <div class="w-full h-14"></div>
     <slot />
     <div class="w-full h-14 md:hidden"></div>
