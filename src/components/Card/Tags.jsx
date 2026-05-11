@@ -81,7 +81,7 @@ export default function Tags({}) {
           }
           transition={{...animation.transition, duration: animation.transition.duration}}
         >
-          <p>Fermentum torquent nullam eleifend euismod accumsan.</p>
+          <p>Photo I took right outside Boston's "cop slide."</p>
           <Corners className="absolute -bottom-3 left-0" />
         </motion.div>
         <motion.div
