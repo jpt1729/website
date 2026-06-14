@@ -14,7 +14,7 @@ import DropDown from "../components/DropDown";
     </h1>
 
     <div
-      class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] lg:grid-rows-[auto_1fr] gap-8 items-start"
+      class="grid grid-cols-1 lg:grid-cols-[3fr_2fr] lg:grid-rows-[auto_1fr] gap-8 items-start"
     >
       <!-- Left col, row 1: Bio + Social -->
       <div class="flex flex-col gap-6 lg:col-start-1 lg:row-start-1">
@@ -23,10 +23,16 @@ import DropDown from "../components/DropDown";
           <p>
             Hi y'all. I'm John. I'm a second year ECE student at UT Austin from
             Houston, Texas. I love hackathons, working on hardware projects, and
-            web development.
+            web development. Currently interning at the U.S. Bureau of
+            Reclamation as a software engineering intern building internal web
+            apps.
             <br />
             <br />
             In my free time, I like to explore cities, train Jiu Jitsu, and of course Texas football.
+            <br />
+            <br />
+            Right now, I'm designing a "hackathon" ESP32 devboard with native
+            LiPo battery support, and <ToolTip tooltip={"just spamming hdlbits 💔"} client:load><span>learning Verilog</span></ToolTip>.
           </p>
         </div>
       </div>
@@ -38,6 +44,16 @@ import DropDown from "../components/DropDown";
         </div>
         <h2 class="font-bold text-2xl mb-2">Some of my experiences</h2>
         <div>
+          <DropDown title="Engineering Intern - Bureau of Reclamation" client:load>
+            <p>
+              Working with the Enterprise Information Management Group on the
+              bureau's asset management systems. Optimizing SQL Server schemas,
+              building data dashboards for Western US regional offices, and
+              independently developing the Land Use Authorization System, a
+              Next.js and FastAPI app that automates SF-299 form tracking and
+              approval workflows.
+            </p>
+          </DropDown>
           <DropDown title="Developer Fellow - Longhorn Developers" client:load>
             <p>
               Currently working on Longhorn Developers, a student run
@@ -82,34 +98,6 @@ import DropDown from "../components/DropDown";
               different excuse to build something fast and figure out the
               details later. Met a lot of wonderful people, learned a whole lot,
               and won a couple on the way!
-            </p>
-          </DropDown>
-          <DropDown
-            title="HIP-SAT Intern - MIT Chemical Engineering"
-            client:load
-          >
-            <p>
-              Spent a summer at the Galloway Lab as a HIP-SAT intern, working
-              under a graduate student mentor on using SNAP circuits to detect
-              and analyze p53 dynamics with the graph generation done in Python.
-            </p>
-            <br />
-            <p>
-              Presenting my findings to faculty, scientists, and fellow
-              enthusiasts at the Boston Mammalian SynBio (da BOMB) 2023
-              conference and earned Top-10 placement in Society of Biomedical
-              Engineering High School Poster Competition, presenting my findings
-              at their 2023 Seattle Annual Research Conference.
-            </p>
-            <br />
-            <img
-              src="/images/bmes-poster.jpg"
-              alt="BMES poster presentation"
-              class="w-1/2 mt-1 shadow-sm"
-            />
-            <p class="text-xs opacity-50 mt-1">
-              The poster I presented at the 2023 BMES High School Poster
-              Competition
             </p>
           </DropDown>
         </div>
@@ -170,6 +158,8 @@ import DropDown from "../components/DropDown";
                   <li class="w-fit">{"> VSCode"}</li>
                 </ToolTip>
                 <li class="w-fit">{"> Git"}</li>
+                <li class="w-fit">{"> GitHub Actions"}</li>
+                <li class="w-fit">{"> Azure DevOps"}</li>
               </ul>
             </div>
           </div>

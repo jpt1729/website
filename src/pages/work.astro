@@ -13,18 +13,76 @@ import VideoLightbox from "../components/VideoLightbox/index.jsx";
       {"> WORK"}
     </h1>
 
-    <div class="max-w-2xl mb-20">
+    <div class="max-w-2xl mb-8">
       <p>
         I'm a developer and researcher who likes building things that matter
         whether that's a mobile app used by hundreds of students, a research
         tool detecting protein dynamics, or a hackathon project thrown together
         in 24 hours. Here's a more complete picture of what I've been up to.
       </p>
+      <a
+        href="/contact"
+        class="inline-block mt-4 text-sm hover:underline decoration-light-accent decoration-2 transition-opacity"
+      >
+        {"> contact me"}
+      </a>
     </div>
 
     <!-- Projects -->
     <section class="mb-16 max-w-full">
       <h2 class="font-bold text-2xl mb-2">Work Experience</h2>
+
+      <WorkItem
+        title="Engineering Intern - Bureau of Reclamation"
+        date="May 2026 – present"
+        location="Denver, CO"
+      >
+        <p>
+          Working with the Enterprise Information Management Group on the
+          bureau's asset management systems. I've been optimizing SQL Server
+          schemas by migrating legacy data from various regional sources, and
+          interviewing field users to turn real complaints into actual database
+          improvements.
+        </p>
+        <br />
+        <p>
+          Also building out data dashboards using Microsoft enterprise tools for
+          Western US regional offices, and independently developing the Land Use
+          Authorization System, a Next.js and FastAPI app that automates
+          SF-299 form tracking and multi-stage approval workflows for the bureau.
+        </p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Next.js</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >FastAPI</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >TailwindCSS</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >SQL Server</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Python</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >GitHub Actions</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >Azure DevOps</span
+          >
+        </div>
+      </WorkItem>
 
       <WorkItem
         title="Developer Fellow - Longhorn Studies"
@@ -130,6 +188,34 @@ import VideoLightbox from "../components/VideoLightbox/index.jsx";
     <!-- Personal Projects -->
     <section class="mb-16 max-w-full">
       <h2 class="font-bold text-2xl mb-2">Personal & Hackathon Projects</h2>
+
+      <WorkItem
+        title="Hackathon Devboard - Personal"
+        date="In Progress"
+        location="Austin, TX"
+      >
+        <p>
+          Designing a custom ESP32 devboard built for hackathons. The main goal
+          is native LiPo battery support so you can run it untethered without
+          any extra hardware. Compact, hackable, and ready to throw into a
+          project without thinking about power.
+        </p>
+        <br />
+        <div class="flex flex-wrap gap-2">
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >ESP32</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >KiCad</span
+          >
+          <span
+            class="text-xs border border-black/10 rounded-md px-2 py-0.5 opacity-50"
+            >LiPo</span
+          >
+        </div>
+      </WorkItem>
 
       <WorkItem
         title="Canary - YHack"
@@ -421,5 +507,6 @@ import VideoLightbox from "../components/VideoLightbox/index.jsx";
         </WorkItem>
       </div>
     </section>
+
   </main>
 </Layout>
