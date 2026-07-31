@@ -3,7 +3,12 @@
     "allow": [
       "Bash(ls -la \"d:\\\\\\\\JohnProject\\\\\\\\new-portfolio\\\\\\\\src\")",
       "Bash(dir \"d:\\\\JohnProject\\\\new-portfolio\\\\public\" /s /b)",
-      "WebFetch(domain:youtube.com)"
+      "WebFetch(domain:youtube.com)",
+      "Bash(sips -g pixelWidth -g pixelHeight public/images/reclamation-poster.png)",
+      "Bash(sips -Z 2000 -s format jpeg -s formatOptions 85 public/images/reclamation-poster.png --out public/images/reclamation-poster.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight public/images/reclamation-poster.jpg)",
+      "Bash(cp /tmp/reclamation-test.jpg public/images/reclamation-poster.jpg)",
+      "Bash(rm /tmp/reclamation-test.jpg)"
     ]
   }
 }
