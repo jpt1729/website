@@ -1,5 +1,6 @@
 ---
 import "@fontsource/ibm-plex-mono";
+import "../styles/global.css";
 import { execSync } from "node:child_process";
 
 import Navbar from "../components/Navbar";
@@ -11,10 +12,16 @@ const { title } = Astro.props;
 
 let gitHash = "dev";
 if (import.meta.env.PROD) {
-  try {
-    gitHash = execSync("git rev-parse --short HEAD").toString().trim();
-  } catch {
-    gitHash = "unknown";
+  // Vercel builds don't ship git history, but expose the deployed commit.
+  const vercelSha = process.env.VERCEL_GIT_COMMIT_SHA;
+  if (vercelSha) {
+    gitHash = vercelSha.slice(0, 7);
+  } else {
+    try {
+      gitHash = execSync("git rev-parse --short HEAD").toString().trim();
+    } catch {
+      gitHash = "unknown";
+    }
   }
 }
 ---

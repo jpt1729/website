@@ -6,7 +6,7 @@ import DropDown from "../components/DropDown";
 ---
 
 <Layout title="John Tan-Aristy">
-  <main class="max-w-screen-xl m-auto px-4 py-6 text-base">
+  <main class="max-w-(--breakpoint-xl) m-auto px-4 py-6 text-base">
     <h1
       class="text-5xl lg:text-9xl text-light-accent border-b-8 border-light-accent w-fit mb-8"
     >
@@ -52,26 +52,27 @@ import DropDown from "../components/DropDown";
               tracking and multi-stage approval workflows.
             </p>
           </DropDown>
-          <DropDown title="Developer Fellow - Longhorn Studies" client:load>
+          <DropDown title="Tech Lead - Longhorn Studies" client:load>
             <p>
-              Building Longhorn Studies (<a
+              Leading a team of 4 engineers building Longhorn Studies (<a
                 href="https://github.com/Longhorn-Developers/Longhorn-Studies"
                 >github.com/Longhorn-Developers/Longhorn-Studies</a
-              >), a mobile study app for UT Austin students, within Longhorn
-              Developers — a student-run open source dev org at UT Austin
-              (Hook 'em Horns 🤘). Working across the full stack in close
-              collaboration with our design team and product managers.
+              >), a study recommendation app for UT Austin's 50,000+ students,
+              within Longhorn Developers — a student-run open source dev org at
+              UT Austin (Hook 'em Horns 🤘). Writing specs, running parallel
+              development across React Native, Flask, and Supabase, and still
+              building core screens from Figma alongside our design team.
             </p>
             <div class="flex gap-2 mt-1">
               <img
                 src="/images/studies-home.png"
                 alt="Longhorn Studies home screen"
-                class="w-1/4 shadow-sm"
+                class="w-1/4 shadow-xs"
               />
               <img
                 src="/images/studies-filter.png"
                 alt="Longhorn Studies filter screen"
-                class="w-1/4 shadow-sm"
+                class="w-1/4 shadow-xs"
               />
             </div>
             <p class="text-xs opacity-50 mt-1">
@@ -108,6 +109,10 @@ import DropDown from "../components/DropDown";
                   <li class="w-fit">{"> React.js"}</li>
                 </ToolTip>
                 <li class="w-fit">{"> React Native"}</li>
+                <li class="w-fit">{"> Expo"}</li>
+                <ToolTip tooltip={"All the animations on this site!"} client:load>
+                  <li class="w-fit">{"> Framer Motion"}</li>
+                </ToolTip>
                 <li class="w-fit">{"> Next.js"}</li>
                 <ToolTip tooltip={"What this website is made in!"} client:load>
                   <li class="w-fit">{"> Astro"}</li>
@@ -127,6 +132,8 @@ import DropDown from "../components/DropDown";
                 <ul>
                   <li class="w-fit">{"> JavaScript"}</li>
                   <li class="w-fit">{"> Python"}</li>
+                  <li class="w-fit">{"> C/C++"}</li>
+                  <li class="w-fit">{"> ARM Assembly"}</li>
                   <li class="w-fit">{"> HTML/CSS"}</li>
                 </ul>
               </div>

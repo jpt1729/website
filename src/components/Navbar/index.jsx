@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 import { CloseIcon, MenuIcon } from "./MenuIcon";
 
@@ -51,7 +51,7 @@ export default function Navbar({ pathname, gitHash = "dev" }) {
   return (
     <>
       <nav className="fixed left-0 top-0 p-3 w-screen bg-off-white z-10 subpixel-antialiased">
-        <div className="max-w-screen-xl m-auto flex justify-between z-50 text-2xl">
+        <div className="max-w-(--breakpoint-xl) m-auto flex justify-between z-50 text-2xl">
           <span className="z-50 mix-blend-difference text-off-white">
             JOHN TAN-ARISTY
           </span>
@@ -102,9 +102,9 @@ export default function Navbar({ pathname, gitHash = "dev" }) {
                 }}
                 className="fixed bg-off-black right-0 top-0 w-screen min-h-screen z-10 text-off-white p-3 overflow-y-scroll"
               >
-                <div class="w-full h-14"></div>
-                <div className="flex max-w-screen-xl m-auto justify-between">
-                  <ol className="m-auto max-w-screen-xl w-full font-medium md:text-8xl text-6xl">
+                <div className="w-full h-14"></div>
+                <div className="flex max-w-(--breakpoint-xl) m-auto justify-between">
+                  <ol className="m-auto max-w-(--breakpoint-xl) w-full font-medium md:text-8xl text-6xl">
                     <MenuItem name="HOME" href="/" select={pathname === '/'} child={0} />
                     <MenuItem
                       name="ABOUT"
@@ -127,7 +127,7 @@ export default function Navbar({ pathname, gitHash = "dev" }) {
                   </ol>
                 </div>
                 <motion.footer
-                  className="flex max-w-screen-xl m-auto justify-between md:mt-6 mt-3 flex-wrap"
+                  className="flex max-w-(--breakpoint-xl) m-auto justify-between md:mt-6 mt-3 flex-wrap"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.35 + 5 * 0.15, duration: 0.35 }}
@@ -168,7 +168,7 @@ export default function Navbar({ pathname, gitHash = "dev" }) {
                   </div>
                 </motion.footer>
                 <motion.div
-                  className="max-w-screen-xl m-auto text-center mt-3"
+                  className="max-w-(--breakpoint-xl) m-auto text-center mt-3"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.35 + 5 * 0.15, duration: 0.35 }}
