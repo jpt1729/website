@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function VideoLightbox({ videoId, caption }) {
   const [open, setOpen] = useState(false);
@@ -23,10 +23,10 @@ export default function VideoLightbox({ videoId, caption }) {
           <img
             src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
             alt={caption || "Video thumbnail"}
-            className="md:w-48 w-24 shadow-sm opacity-80 hover:opacity-50 transition-opacity duration-200"
+            className="md:w-48 w-24 shadow-xs opacity-80 hover:opacity-50 transition-opacity duration-200"
           />
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <svg className="w-5 h-5 text-white drop-shadow" viewBox="0 0 24 24" fill="currentColor">
+            <svg className="w-5 h-5 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
@@ -62,7 +62,7 @@ export default function VideoLightbox({ videoId, caption }) {
             >
               <iframe
                 src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                className="h-[75vh] aspect-[9/16]"
+                className="h-[75vh] aspect-9/16"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
